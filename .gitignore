@@ -1,0 +1,39 @@
+# Python / Jupyter
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.env
+.venv/
+
+# Local provenance copies. Keep these privately as an audit trail, but do not
+# upload exploratory/legacy notebooks in the reviewer-facing GitHub repository.
+notebooks/legacy_unmodified/
+
+# Large analysis data: deposit these in GEO or another public data repository, not GitHub
+*.h5ad
+*.h5Seurat
+*.rds
+*.RData
+*.rda
+*.loom
+*.mtx
+*.fastq
+*.fastq.gz
+*.bam
+*.bai
+*.cram
+*.h5
+
+# Generated outputs
+outputs/*
+!outputs/.gitkeep
+figures/generated/
+tables/generated/
+
+# Local-only paths and temporary office files
+.DS_Store
+.Rhistory
+**/.DS_Store
+**/.Rhistory
+~$*.xlsx
+*.tmp

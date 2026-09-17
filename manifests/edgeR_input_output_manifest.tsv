@@ -1,0 +1,7 @@
+xlsx_name	expected_relative_path	sheet1_rows_at_least	sheet1_columns	gsea_sheet_present	notes
+3_High_CMV_edgeRDEresults.xlsx	3_High_CMV_edgeRDEresults.xlsx	11114	Gene; logFC; logCPM; LR; PValue; FDR	yes	Low infected vs high infected edgeR/GSEA workbook.
+4_Bystander_edgeRDEresults.xlsx	DE_mock_vs_bystander/4_Bystander_edgeRDEresults.xlsx	10990	Gene; logFC; logCPM; LR; PValue; FDR	yes	Mock vs bystander edgeR/GSEA workbook.
+5_Bystander_bkgd_edgeRDEresults.xlsx	DE_mock_vs_low/5_Bystander_bkgd_edgeRDEresults.xlsx	10726	Gene; logFC; logCPM; LR; PValue; FDR	yes	Mock vs marginally infected edgeR/GSEA workbook used for Figure 4F.
+6_Infected_edgeRDEresults.xlsx	DE_mock_vs_high/6_Infected_edgeRDEresults.xlsx	11160	Gene; logFC; logCPM; LR; PValue; FDR	yes	Mock vs highly infected edgeR/GSEA workbook used for Figure 4E.
+7_Infected_edgeRDEresults.xlsx	7_Infected_edgeRDEresults.xlsx	11080	Gene; logFC; logCPM; LR; PValue; FDR	yes	Bystander vs highly infected edgeR/GSEA workbook used for Figure 4H.
+1_medium_infection_vs_mock_edgeRDEresults.xlsx	1_medium_infection_vs_mock_edgeRDEresults.xlsx	11758	Gene; logFC; logCPM; LR; PValue; FDR	yes	Additional infection-vs-mock edgeR/GSEA workbook.

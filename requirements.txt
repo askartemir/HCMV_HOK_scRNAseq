@@ -1,0 +1,12 @@
+anndata
+scanpy
+pandas
+numpy
+scipy
+matplotlib
+seaborn
+gseapy
+openpyxl
+xlsxwriter
+scikit-learn
+sciviewer

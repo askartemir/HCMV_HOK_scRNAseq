@@ -1,0 +1,22 @@
+name: hcmv-hok-scrnaseq
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.11
+  - pandas
+  - numpy
+  - scipy
+  - matplotlib
+  - seaborn
+  - scikit-learn
+  - ipykernel
+  - openjdk=17
+  - openpyxl
+  - xlsxwriter
+  - anndata
+  - scanpy
+  - pip
+  - pip:
+      - gseapy
+      - sciviewer
