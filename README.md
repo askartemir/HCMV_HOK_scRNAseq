@@ -50,13 +50,21 @@ conda activate hcmv-hok-scrnaseq
 
 or install from `requirements.txt` into a compatible Python environment.
 
-For the interactive SCIViewer notebook, use a Jupyter kernel from this environment. On this machine, the working kernel is registered as `Python (HCMV sciviewer)`. SCIViewer uses `py5`, so Java 17 is required; the conda environment installs `openjdk=17`.
+The deterministic scripts above do not require launching SCIViewer. They start from saved SCIViewer/edgeR outputs and regenerate the submitted tables and plotted panels.
+
+SCIViewer is only needed if you want to manually recreate the interactive directional selections in `notebooks/reproduce_directional_analysis_1.ipynb` or `notebooks/reproduce_directional_analysis_2.ipynb`. For those notebooks, use a Jupyter kernel from this environment. SCIViewer uses `py5`, so Java 17 is required; the conda environment installs `openjdk=17`.
 
 If registering a fresh kernel manually:
 
 ```bash
 python -m ipykernel install --user --name hcmv-sciviewer --display-name "Python (HCMV sciviewer)"
 ```
+
+SCIViewer/py5 platform notes:
+
+- macOS: the notebooks enable the macOS GUI event loop before loading `py5`.
+- Windows/Linux: the notebooks skip the macOS-only GUI command and load `py5` directly.
+- If SCIViewer does not open, launch Jupyter from the activated conda environment and confirm that `JAVA_HOME` points to the Java installation in that environment.
 
 ## Reproduction Order
 
