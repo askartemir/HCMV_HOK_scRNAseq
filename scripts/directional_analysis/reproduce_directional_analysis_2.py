@@ -34,23 +34,19 @@ TABLE_S6_LEGEND = [
 
 
 def correlation_strength(r_value: float) -> str:
-    """Return the qualitative correlation-strength label used in the tables."""
+    """Return the qualitative correlation-strength label defined in the table legend."""
     if pd.isna(r_value):
         return "Other"
-    if 0.3 <= r_value < 0.5:
-        return "Moderate Positive Correlation"
-    if 0.5 <= r_value < 0.7:
-        return "Strong Positive Correlation"
     if r_value >= 0.7:
-        return "Very Strong Positive Correlation"
-    if -0.5 < r_value <= -0.3:
-        return "Moderate Negative Correlation"
-    if -0.7 < r_value <= -0.5:
-        return "Strong Negative Correlation"
-    if r_value <= -0.7:
-        return "Very Strong Negative Correlation"
+        return "Strong Positive Correlation"
+    if 0.3 <= r_value < 0.7:
+        return "Moderate Positive Correlation"
     if r_value > 0:
         return "Weak Positive Correlation"
+    if r_value <= -0.7:
+        return "Strong Negative Correlation"
+    if -0.7 < r_value <= -0.3:
+        return "Moderate Negative Correlation"
     if r_value < 0:
         return "Weak Negative Correlation"
     return "Other"
