@@ -16,6 +16,8 @@ from pathlib import Path
 
 import numpy as np
 import pandas as pd
+from openpyxl import load_workbook
+from openpyxl.styles import Border, Side
 
 TABLE_S6_SHEET = "Directional Analysis 2 Results"
 TABLE_S7_SHEET = "GSEA_MSigDB_Hallmark_2020"
@@ -99,6 +101,25 @@ def add_table_s6_legend(table: pd.DataFrame) -> pd.DataFrame:
     return out
 
 
+def format_table_s6(output_path: Path) -> None:
+    """Apply small reviewer-facing formatting without changing table values."""
+    workbook = load_workbook(output_path)
+    worksheet = workbook[TABLE_S6_SHEET]
+    for cell in ("E1", "F1", "H1"):
+        worksheet[cell].value = None
+
+    thin_border = Border(
+        left=Side(style="thin"),
+        right=Side(style="thin"),
+        top=Side(style="thin"),
+        bottom=Side(style="thin"),
+    )
+    for row in worksheet["G1:H6"]:
+        for cell in row:
+            cell.border = thin_border
+    workbook.save(output_path)
+
+
 def write_table_s6(input_path: Path, output_path: Path, sheet_name: str | None = None) -> None:
     raw = read_table(input_path, sheet_name=sheet_name)
     cleaned = clean_projection_correlation(raw)
@@ -106,6 +127,7 @@ def write_table_s6(input_path: Path, output_path: Path, sheet_name: str | None =
     output_path.parent.mkdir(parents=True, exist_ok=True)
     with pd.ExcelWriter(output_path, engine="openpyxl") as writer:
         table.to_excel(writer, sheet_name=TABLE_S6_SHEET, index=False)
+    format_table_s6(output_path)
 
 
 def write_table_s7(gsea_workbook: Path, output_path: Path, source_sheet: str = DA2_GSEA_SOURCE_SHEET) -> None:
