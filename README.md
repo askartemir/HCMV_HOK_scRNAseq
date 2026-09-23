@@ -4,7 +4,7 @@ This repository contains Python code used to reproduce selected HCMV HOK scRNA-s
 
 ## Scope
 
-This repository is organized as a reproducibility package for manuscript-associated Python analyses. Large data objects are excluded from GitHub and should be obtained from GEO or the manuscript data repository once accession information is available.
+This repository is organized as a reproducibility package for manuscript-associated Python analyses. Large data objects are excluded from GitHub and should be obtained from GEO accession `GSE348416`.
 
 Reproduced outputs:
 
@@ -32,6 +32,8 @@ outputs/                        Local generated outputs, ignored by Git
 ```
 
 ## Data Availability
+
+Raw sequencing data, processed count matrices, Seurat objects, AnnData objects, and analysis intermediate files are available through NCBI GEO accession `GSE348416`. The GEO record remains private until publication; during peer review, access is provided through the private GEO reviewer token supplied in the journal submission system.
 
 Do not commit `.h5ad`, `.rds`, `.h5Seurat`, FASTQ, count matrices, or generated bulk outputs to this repository. See:
 

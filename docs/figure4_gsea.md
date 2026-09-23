@@ -1,6 +1,6 @@
 # Figure 4 GSEA provenance
 
-Figure 4A-D volcano plots and the upstream edgeR comparisons are outside the scope of this Python script. This repository reproduces the Figure 4E-H GSEA NES panels from saved edgeR/GSEA result workbooks.
+Figure 4A-D volcano plots and the upstream edgeR comparisons are outside the scope of this Python script. This repository reproduces the Figure 4E-H GSEA NES panels from saved edgeR/GSEA result workbooks. The required data workbooks are available through GEO accession `GSE348416`.
 
 Cleaned script:
 

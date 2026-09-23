@@ -10,4 +10,4 @@ The scripts inspected during this organization pass were:
 - `analysis_soupx_sample_processing.R`
 - `analysis_cmv_gene_exp_soupx.R`
 
-Major referenced/generated R objects are listed in `manifests/R_objects_manifest.tsv`. These large files should be deposited with GEO or an equivalent public repository, not committed here.
+Major referenced/generated R objects are listed in `manifests/R_objects_manifest.tsv`. These large files are available through GEO accession `GSE348416` and are not committed here.

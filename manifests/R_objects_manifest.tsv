@@ -1,8 +1,8 @@
 filename	size_human	suggested_destination	notes
-cmv_seurat_filtered_counts.rds	1.4 GB	GEO_or_public_data_repository	Pre-SoupX filtered Seurat checkpoint after initial QC/UMAP workflow.
-cmv_seurat_filtered_counts_redo.rds	1.4 GB	GEO_or_public_data_repository	Seurat object used as input for the SoupX workflow.
-cmv.srt.soupx.rds	485.1 MB	GEO_or_public_data_repository	Seurat object after SoupX count adjustment and before final filtering/normalization/clustering.
-cmv.srt.soupx.filt.rds	2.1 GB	GEO_or_public_data_repository	Final SoupX-filtered Seurat object used for upstream R analysis and downstream AnnData conversion.
-cmv.srt.soupx.filt.dpi3Infected.only.rds	110.4 MB	GEO_or_public_data_repository	3 dpi infected-only Seurat subset.
-cmv.srt.soupx.filt.dpi3.cmvgene.rds	1.2 MB	GEO_or_public_data_repository	CMV-gene-focused R object/checkpoint.
-cmv.filt.h5Seurat	852.4 MB	GEO_or_public_data_repository	h5Seurat checkpoint of the filtered CMV object.
+cmv_seurat_filtered_counts.rds	1.4 GB	GEO_GSE348416	Pre-SoupX filtered Seurat checkpoint after initial QC/UMAP workflow.
+cmv_seurat_filtered_counts_redo.rds	1.4 GB	GEO_GSE348416	Seurat object used as input for the SoupX workflow.
+cmv.srt.soupx.rds	485.1 MB	GEO_GSE348416	Seurat object after SoupX count adjustment and before final filtering/normalization/clustering.
+cmv.srt.soupx.filt.rds	2.1 GB	GEO_GSE348416	Final SoupX-filtered Seurat object used for upstream R analysis and downstream AnnData conversion.
+cmv.srt.soupx.filt.dpi3Infected.only.rds	110.4 MB	GEO_GSE348416	3 dpi infected-only Seurat subset.
+cmv.srt.soupx.filt.dpi3.cmvgene.rds	1.2 MB	GEO_GSE348416	CMV-gene-focused R object/checkpoint.
+cmv.filt.h5Seurat	852.4 MB	GEO_GSE348416	h5Seurat checkpoint of the filtered CMV object.

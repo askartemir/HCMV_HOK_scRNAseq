@@ -6,6 +6,8 @@ The SCIViewer Directional Analysis 2 supplemental figure corresponds to final ma
 
 This note is included because earlier local figure filenames did not always match the final manuscript figure numbering.
 
+Large input/intermediate files are available through GEO accession `GSE348416`.
+
 ## Exact supplemental-table sources
 
 Directional Analysis 2 submitted supplemental tables were matched exactly to:

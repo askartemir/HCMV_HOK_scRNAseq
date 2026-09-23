@@ -1,6 +1,6 @@
 # Directional Analysis 1 provenance
 
-Directional Analysis 1 uses an interactive SCIViewer selection on the 3 dpi infected-cell AnnData object. The saved selected cells and projection-correlation output are treated as reproducibility inputs for regenerating the submitted supplemental tables and plotted panels.
+Directional Analysis 1 uses an interactive SCIViewer selection on the 3 dpi infected-cell AnnData object. The saved selected cells and projection-correlation output are treated as reproducibility inputs for regenerating the submitted supplemental tables and plotted panels. Large input/intermediate files are available through GEO accession `GSE348416`.
 
 Required input files:
 
@@ -59,4 +59,4 @@ python scripts/figures/plot_directional_gene_dotplots.py \
 
 The dotplot script writes both PNG figures and audit workbooks containing the selected genes, group mean expression, z-scored average expression, and percent-expressing values used for plotting. The plotted groups are 3 dpi Mock, Bystander, Marginal Infection, and High Infection bins by percent HCMV transcripts. The `--use-raw --average-method seurat` settings mirror the Seurat/scCustomize dotplot convention used for the original R plotting code.
 
-Large `.h5ad` and `.rds` files are expected to be supplied separately through GEO or an equivalent public data repository.
+Large `.h5ad` and `.rds` files are expected to be supplied separately through GEO accession `GSE348416`.

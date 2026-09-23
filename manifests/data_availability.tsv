@@ -1,8 +1,8 @@
 data_file	type	github_policy	data_repository_policy	used_for
-cmv.srt.soupx.filt.h5ad	AnnData	exclude	deposit in GEO/public data	Broad AnnData object used for dotplots across infection-state groups.
-cmv.srt.soupx.filt.updated.h5ad	AnnData	exclude	deposit in GEO/public data	Updated broad AnnData object containing UMAP coordinates and current AnnData categorical layout.
-cmv.srt.soupx.filt.dpi3Infected.only_v3.h5ad	AnnData	exclude	deposit in GEO/public data	3 dpi infected-only AnnData object used for infected-cell directional/UMAP work.
-infected_cells_3dpi_cmv_data.h5ad	AnnData	exclude	deposit in GEO/public data	3 dpi infected-cell AnnData object used for SCIViewer directional analyses.
-cmv.srt.soupx.filt.rds	Seurat R object	exclude	deposit in GEO/public data	Final SoupX-filtered Seurat object used for upstream R analysis and downstream AnnData conversion.
-cmv_seurat_filtered_counts_redo.rds	Seurat R object	exclude	deposit in GEO/public data	Seurat object used as input for the SoupX workflow.
-edgeR result workbooks	Excel	exclude from GitHub; provide through supplemental data or GEO	deposit in GEO/public data or manuscript supplemental data	Figure 4 GSEA panels.
+cmv.srt.soupx.filt.h5ad	AnnData	exclude	available through GEO accession GSE348416	Broad AnnData object used for dotplots across infection-state groups.
+cmv.srt.soupx.filt.updated.h5ad	AnnData	exclude	available through GEO accession GSE348416	Updated broad AnnData object containing UMAP coordinates and current AnnData categorical layout.
+cmv.srt.soupx.filt.dpi3Infected.only_v3.h5ad	AnnData	exclude	available through GEO accession GSE348416	3 dpi infected-only AnnData object used for infected-cell directional/UMAP work.
+infected_cells_3dpi_cmv_data.h5ad	AnnData	exclude	available through GEO accession GSE348416	3 dpi infected-cell AnnData object used for SCIViewer directional analyses.
+cmv.srt.soupx.filt.rds	Seurat R object	exclude	available through GEO accession GSE348416	Final SoupX-filtered Seurat object used for upstream R analysis and downstream AnnData conversion.
+cmv_seurat_filtered_counts_redo.rds	Seurat R object	exclude	available through GEO accession GSE348416	Seurat object used as input for the SoupX workflow.
+edgeR result workbooks	Excel	exclude from GitHub; provide through supplemental data or GEO	available through GEO accession GSE348416 or manuscript supplemental data	Figure 4 GSEA panels.

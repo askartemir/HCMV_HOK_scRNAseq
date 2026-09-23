@@ -1,11 +1,11 @@
 filename	size_bytes	matrix_shape_from_h5ls	suggested_destination	notes
-cmv.srt.soupx.filt.h5ad	1105223916	8623 x 20388	GEO_or_public_data_repository	Broad AnnData object used for dotplots across infection-state groups.
-cmv.srt.soupx.filt.updated.h5ad	2131463300	8623 x 20388	GEO_or_public_data_repository	Updated broad AnnData object containing UMAP coordinates and current AnnData categorical layout.
-cmv.srt.soupx.filt.dpi3Infected.only_v3.h5ad	73813043	389 x 20024	GEO_or_public_data_repository	3 dpi infected-only AnnData object used for infected-cell directional/UMAP work.
-infected_cells_3dpi_cmv_data.h5ad	99174600	389 x 20388	GEO_or_public_data_repository	3 dpi infected-cell AnnData object used for SCIViewer directional analyses.
-infected_cmv_data.h5ad	259309396	1318 x 20388	GEO_or_public_data_repository	Derived infected-cell AnnData subset.
-healthy_cmv_data.h5ad	464677080	2662 x 20388	GEO_or_public_data_repository	Derived healthy/mock-cell AnnData subset.
-healthy_plus_infected_cmv_data.h5ad	694103720	3980 x 20388	GEO_or_public_data_repository	Derived healthy plus infected AnnData subset.
-cmv.filt.h5ad	751650410	not inspected	GEO_or_public_data_repository	Additional HCMV AnnData checkpoint.
-cmv.srt.soupx.filt.dpi3.cmvgene.rds	1213111	not inspected	GEO_or_public_data_repository	CMV-gene-focused R object/checkpoint.
-cmv.srt.soupx.filt.dpi3Infected.only.rds	115784526	not inspected	GEO_or_public_data_repository	3 dpi infected-only Seurat subset.
+cmv.srt.soupx.filt.h5ad	1105223916	8623 x 20388	GEO_GSE348416	Broad AnnData object used for dotplots across infection-state groups.
+cmv.srt.soupx.filt.updated.h5ad	2131463300	8623 x 20388	GEO_GSE348416	Updated broad AnnData object containing UMAP coordinates and current AnnData categorical layout.
+cmv.srt.soupx.filt.dpi3Infected.only_v3.h5ad	73813043	389 x 20024	GEO_GSE348416	3 dpi infected-only AnnData object used for infected-cell directional/UMAP work.
+infected_cells_3dpi_cmv_data.h5ad	99174600	389 x 20388	GEO_GSE348416	3 dpi infected-cell AnnData object used for SCIViewer directional analyses.
+infected_cmv_data.h5ad	259309396	1318 x 20388	GEO_GSE348416	Derived infected-cell AnnData subset.
+healthy_cmv_data.h5ad	464677080	2662 x 20388	GEO_GSE348416	Derived healthy/mock-cell AnnData subset.
+healthy_plus_infected_cmv_data.h5ad	694103720	3980 x 20388	GEO_GSE348416	Derived healthy plus infected AnnData subset.
+cmv.filt.h5ad	751650410	not inspected	GEO_GSE348416	Additional HCMV AnnData checkpoint.
+cmv.srt.soupx.filt.dpi3.cmvgene.rds	1213111	not inspected	GEO_GSE348416	CMV-gene-focused R object/checkpoint.
+cmv.srt.soupx.filt.dpi3Infected.only.rds	115784526	not inspected	GEO_GSE348416	3 dpi infected-only Seurat subset.
