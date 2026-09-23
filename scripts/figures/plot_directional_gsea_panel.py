@@ -2,8 +2,8 @@
 """Plot SciViewer directional-analysis GSEA panels.
 
 This script makes the manuscript-style normalized enrichment score (NES)
-bar plot from a Table S5/Table S7-style GSEA workbook. It is intentionally
-separate from the interactive SCIViewer selection step: the plot starts from
+bar plot from a Table S5/Table S7-style GSEA workbook. The plotting step is
+separate from the interactive SCIViewer selection step: it starts from
 the saved GSEA result table generated from genes ranked by directional
 correlation.
 """
@@ -88,7 +88,7 @@ def plot_gsea_bar(
 
 
 def write_selected_pathways(selected: pd.DataFrame, output_path: Path) -> None:
-    """Save the plotted pathway subset for auditing."""
+    """Save the plotted pathway subset for traceability."""
     output_path.parent.mkdir(parents=True, exist_ok=True)
     keep = [col for col in ["Term", "NES", "FDR q-val", "NOM p-val", "FWER p-val", "Lead_genes"] if col in selected.columns]
     selected[keep].to_csv(output_path, sep="\t", index=False)

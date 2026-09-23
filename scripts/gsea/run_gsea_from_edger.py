@@ -6,7 +6,7 @@ the scope of this script. This script reproduces the GSEA NES panels from saved
 edgeR/GSEA result workbooks.
 
 Default use is `plot-saved`: read the saved GSEA sheets already present in the
-edgeR workbooks and regenerate Figure 4E-H-style NES bar plots plus audit TSVs.
+edgeR workbooks and regenerate Figure 4E-H-style NES bar plots plus pathway TSVs.
 The optional `run-prerank` command reruns GSEA from `Gene` and `logFC`.
 """
 
@@ -144,7 +144,7 @@ def plot_nes_panel(
 
 
 def write_selected_pathways(selected: pd.DataFrame, output_path: Path) -> None:
-    """Save the plotted pathway subset for audit/reviewer inspection."""
+    """Save the plotted pathway subset for traceability."""
     keep = [col for col in ["Term", "NES", "FDR q-val", "NOM p-val", "FWER p-val", "Lead_genes"] if col in selected.columns]
     output_path.parent.mkdir(parents=True, exist_ok=True)
     selected[keep].to_csv(output_path, sep="\t", index=False)
@@ -187,7 +187,7 @@ def plot_saved_panels(input_root: Path, output_dir: Path, fdr_cutoff: float, top
                 "plotted_pathways": len(selected),
                 "svg_output": str(svg_path),
                 "png_output": str(png_path),
-                "audit_tsv": str(tsv_path),
+                "pathway_tsv": str(tsv_path),
             }
         )
         print(f"Wrote: {svg_path}")
@@ -227,7 +227,7 @@ def run_prerank(
     try:
         import gseapy as gp
     except ImportError as exc:
-        raise ImportError("The run-prerank command requires gseapy. Use plot-saved if you only need manuscript panels.") from exc
+        raise ImportError("The run-prerank command requires gseapy. Use plot-saved for manuscript panel reproduction.") from exc
 
     output_dir.mkdir(parents=True, exist_ok=True)
     ranked = load_ranked_genes(job)

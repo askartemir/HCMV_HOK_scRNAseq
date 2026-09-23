@@ -305,7 +305,7 @@ def plot_dotplot(
 
 
 def write_dotplot_table(genes: pd.DataFrame, values: pd.DataFrame, output_path: Path) -> None:
-    """Write selected genes and plotted dotplot values for auditing."""
+    """Write selected genes and plotted dotplot values for traceability."""
     output_path.parent.mkdir(parents=True, exist_ok=True)
     with pd.ExcelWriter(output_path, engine="openpyxl") as writer:
         genes.to_excel(writer, index=False, sheet_name="selected_genes")

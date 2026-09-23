@@ -53,7 +53,7 @@ and also to:
 
 `cmv.srt.soupx.filt.dpi3Infected.only_v3.h5ad`
 
-They do not map to the all-cell object. The notebook therefore opens `infected_cells_3dpi_cmv_data.h5ad` for the interactive SCIViewer step and uses:
+Those selected-cell indices are specific to the infected-cell subset rather than the all-cell object. The notebook therefore opens `infected_cells_3dpi_cmv_data.h5ad` for the interactive SCIViewer step and uses:
 
 ```python
 SCIViewer(adata, embedding_name="X_umap", use_raw=False)

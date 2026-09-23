@@ -4,7 +4,7 @@ This repository contains Python code used to reproduce selected HCMV HOK scRNA-s
 
 ## Scope
 
-This repository is organized as a reproducibility package for manuscript-associated Python analyses. Large data objects are excluded from GitHub and should be obtained from GEO accession `GSE348416`.
+This repository is organized as a reproducibility package for manuscript-associated Python analyses. Large data objects are distributed through GEO accession `GSE348416`.
 
 Reproduced outputs:
 
@@ -28,14 +28,14 @@ scripts/gsea/                   Figure 4 GSEA panel scripts
 manifests/                      Data, code, and output provenance tables
 docs/                           Method/provenance notes
 data/                           No large data; see data/README.md
-outputs/                        Local generated outputs, ignored by Git
+outputs/                        Generated outputs from local reruns
 ```
 
 ## Data Availability
 
 Raw sequencing data, processed count matrices, Seurat objects, AnnData objects, and analysis intermediate files are available through NCBI GEO accession `GSE348416`. The GEO record remains private until publication; during peer review, access is provided through the private GEO reviewer token supplied in the journal submission system.
 
-Do not commit `.h5ad`, `.rds`, `.h5Seurat`, FASTQ, count matrices, or generated bulk outputs to this repository. See:
+Large `.h5ad`, `.rds`, `.h5Seurat`, FASTQ, count matrix, and generated-output files are distributed through GEO or regenerated locally rather than stored in this repository. See:
 
 - `manifests/h5ad_and_rds_manifest.tsv`
 - `manifests/R_objects_manifest.tsv`
@@ -52,9 +52,9 @@ conda activate hcmv-hok-scrnaseq
 
 or install from `requirements.txt` into a compatible Python environment.
 
-The deterministic scripts above do not require launching SCIViewer. They start from saved SCIViewer/edgeR outputs and regenerate the submitted tables and plotted panels.
+The deterministic scripts above run without launching SCIViewer. They start from saved SCIViewer/edgeR outputs and regenerate the submitted tables and plotted panels.
 
-SCIViewer is only needed if you want to manually recreate the interactive directional selections in `notebooks/reproduce_directional_analysis_1.ipynb` or `notebooks/reproduce_directional_analysis_2.ipynb`. For those notebooks, use a Jupyter kernel from this environment. SCIViewer uses `py5`, so Java 17 is required; the conda environment installs `openjdk=17`.
+SCIViewer is only required for manually recreating the interactive directional selections in `notebooks/reproduce_directional_analysis_1.ipynb` or `notebooks/reproduce_directional_analysis_2.ipynb`. For those notebooks, use a Jupyter kernel from this environment. SCIViewer uses `py5`, so Java 17 is required; the conda environment installs `openjdk=17`.
 
 If registering a fresh kernel manually:
 
@@ -70,7 +70,7 @@ SCIViewer/py5 platform notes:
 
 ## Reproduction Order
 
-Run commands from the repository root. Replace `/path/to/...` with local copies of the manuscript data files listed in `manifests/`.
+Run commands from the repository root. Replace `/path/to/...` with downloaded copies of the manuscript data files listed in `manifests/`.
 
 1. Reproduce Directional Analysis 1 supplemental tables:
 

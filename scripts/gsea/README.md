@@ -21,7 +21,7 @@ Panel mapping:
 - Figure 4G: `DE_mock_vs_bystander/4_Bystander_edgeRDEresults.xlsx`
 - Figure 4H: `7_Infected_edgeRDEresults.xlsx`
 
-The `plot-saved` command is deterministic: it reads the GSEA sheets already saved in those workbooks and regenerates SVG/PNG panels plus pathway-audit TSVs.
+The `plot-saved` command is deterministic: it reads the GSEA sheets already saved in those workbooks and regenerates SVG/PNG panels plus plotted-pathway TSVs.
 
 Optional rerun from edgeR `Gene` and `logFC`:
 

@@ -4,7 +4,7 @@ Directional Analysis 1 uses an interactive SCIViewer selection on the 3 dpi infe
 
 Required input files:
 
-- `infected_cells_3dpi_cmv_data.h5ad`: AnnData input; too large for GitHub, should be deposited in GEO/public data.
+- `infected_cells_3dpi_cmv_data.h5ad`: AnnData input available through GEO accession `GSE348416`.
 - `selected_cells_04Nov24_dir1_dpi3_infected.only.host.only.csv`: saved selected cells/projection for Directional Analysis 1.
 - `results_04Nov24_dir1_dpi3_infected.only.host.only.proj_correlation.xlsx`: source projection-correlation export matching submitted Table S4 values.
 - `04Nov24_dir1_dpi3_infected.only.host.only.filtgenes.fdr_10_to_genes_with_regulation_mapping.xlsx`: source workbook containing the GSEA sheet used for submitted Table S5.
@@ -16,13 +16,13 @@ Cleaned interactive notebook:
 
 Use this notebook to reopen SCIViewer, recreate the Directional Analysis 1 selection, export a new selected-cell/projection-correlation intermediate, and then run the deterministic downstream cells.
 
-To run the interactive SCIViewer cell on this machine, select the Jupyter kernel named `Python (HCMV sciviewer)`, restart the notebook, and run from the top. The notebook sets `JAVA_HOME`, loads the `py5` extension, and enables the macOS GUI event loop before importing SCIViewer.
+To run the interactive SCIViewer cell, select the Jupyter kernel named `Python (HCMV sciviewer)`, restart the notebook, and run from the top. The notebook sets `JAVA_HOME`, loads the `py5` extension, and enables the macOS GUI event loop when running on macOS before importing SCIViewer.
 
 Cleaned script:
 
 `../scripts/directional_analysis/reproduce_directional_analysis_1.py`
 
-Example commands, assuming data files are placed locally outside Git-tracked paths:
+Example commands, assuming data files are available in the local data directory or through `HCMV_DATA_DIR`:
 
 ```bash
 python scripts/directional_analysis/reproduce_directional_analysis_1.py table-s4 \
@@ -57,6 +57,6 @@ python scripts/figures/plot_directional_gene_dotplots.py \
   --average-method seurat
 ```
 
-The dotplot script writes both PNG figures and audit workbooks containing the selected genes, group mean expression, z-scored average expression, and percent-expressing values used for plotting. The plotted groups are 3 dpi Mock, Bystander, Marginal Infection, and High Infection bins by percent HCMV transcripts. The `--use-raw --average-method seurat` settings mirror the Seurat/scCustomize dotplot convention used for the original R plotting code.
+The dotplot script writes both PNG figures and traceability workbooks containing the selected genes, group mean expression, z-scored average expression, and percent-expressing values used for plotting. The plotted groups are 3 dpi Mock, Bystander, Marginal Infection, and High Infection bins by percent HCMV transcripts. The `--use-raw --average-method seurat` settings mirror the Seurat/scCustomize dotplot convention used for the original R plotting code.
 
 Large `.h5ad` and `.rds` files are expected to be supplied separately through GEO accession `GSE348416`.

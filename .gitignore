@@ -5,11 +5,11 @@ __pycache__/
 .env
 .venv/
 
-# Local provenance copies. Keep these privately as an audit trail, but do not
-# upload exploratory/legacy notebooks in the reviewer-facing GitHub repository.
+# Untracked source notebooks and exploratory copies are kept outside the
+# reproducibility package.
 notebooks/legacy_unmodified/
 
-# Large analysis data: deposit these in GEO or another public data repository, not GitHub
+# Large analysis data are distributed through GEO rather than this repository.
 *.h5ad
 *.h5Seurat
 *.rds
@@ -30,7 +30,7 @@ outputs/*
 figures/generated/
 tables/generated/
 
-# Local-only paths and temporary office files
+# Local system files and temporary office files
 .DS_Store
 .Rhistory
 **/.DS_Store
