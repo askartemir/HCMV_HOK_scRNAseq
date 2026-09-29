@@ -54,12 +54,18 @@ or install from `requirements.txt` into a compatible Python environment.
 
 The deterministic scripts above run without launching SCIViewer. They start from saved SCIViewer/edgeR outputs and regenerate the submitted tables and plotted panels.
 
-SCIViewer is only required for manually recreating the interactive directional selections in `notebooks/reproduce_directional_analysis_1.ipynb` or `notebooks/reproduce_directional_analysis_2.ipynb`. For those notebooks, use a Jupyter kernel from this environment. SCIViewer uses `py5`, so Java 17 is required; the conda environment installs `openjdk=17`.
+SCIViewer is only required for manually recreating the interactive directional selections in `notebooks/reproduce_directional_analysis_1.ipynb` or `notebooks/reproduce_directional_analysis_2.ipynb`. For those notebooks, use JupyterLab and a Jupyter kernel from this environment. JupyterLab is included in both `environment.yml` and `requirements.txt`. SCIViewer uses `py5`, so Java 17 is required; the conda environment installs `openjdk=17`.
 
 If registering a fresh kernel manually:
 
 ```bash
 python -m ipykernel install --user --name hcmv-sciviewer --display-name "Python (HCMV sciviewer)"
+```
+
+Launch the interactive notebooks from the activated environment with:
+
+```bash
+jupyter lab
 ```
 
 SCIViewer/py5 platform notes:
@@ -71,6 +77,19 @@ SCIViewer/py5 platform notes:
 ## Reproduction Order
 
 Run commands from the repository root. Replace `/path/to/...` with downloaded copies of the manuscript data files listed in `manifests/`.
+
+Files downloaded directly from GEO are named with the accession prefix `GSE348416_`. The scripts and notebooks expect the project filenames listed in `manifests/` without that prefix. After downloading GEO files into `data/` or another local data directory, normalize the filenames before running the commands below:
+
+```bash
+python scripts/prepare_geo_files.py data --dry-run
+python scripts/prepare_geo_files.py data
+```
+
+If your files are stored outside `data/`, pass that directory instead:
+
+```bash
+python scripts/prepare_geo_files.py /path/to/downloaded_geo_files
+```
 
 1. Reproduce Directional Analysis 1 supplemental tables:
 

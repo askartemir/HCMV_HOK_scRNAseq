@@ -1,5 +1,6 @@
 anndata
 scanpy
+jupyterlab
 pandas
 numpy
 scipy

@@ -16,6 +16,7 @@ dependencies:
   - xlsxwriter
   - anndata
   - scanpy
+  - jupyterlab
   - pip
   - pip:
       - gseapy
